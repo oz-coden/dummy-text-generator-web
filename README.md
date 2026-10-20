@@ -89,8 +89,6 @@ This project is released under the [MIT License](LICENSE).
 
 Shared styles, navigation and themes: [oz-coden.com-ui-web](https://github.com/oz-coden/oz-coden.com-ui-web).
 
-The initial implementation was adapted from the [dummy-text-generator tool](https://github.com/oz-coden/oz-coden.github.io/tree/dfc7c0a29396e2114d73e99dd17d494f7ab1c5ee/tools/dummy-text-generator) in oz-coden.github.io. This repository contains the source needed to run and modify the application independently.
-
 Preset excerpts:
 
 - 宮沢賢治『ポラーノの広場』
@@ -187,8 +185,6 @@ This project is released under the [MIT License](LICENSE).
 ## クレジット
 
 共通のスタイル・ナビゲーション・テーマ：[oz-coden.com-ui-web](https://github.com/oz-coden/oz-coden.com-ui-web)。
-
-初期実装は、oz-coden.github.ioの[dummy-text-generatorツール](https://github.com/oz-coden/oz-coden.github.io/tree/dfc7c0a29396e2114d73e99dd17d494f7ab1c5ee/tools/dummy-text-generator)を元にしています。このリポジトリには、単独でアプリを実行・変更するためのソースを含めています。
 
 プリセットには、次の作品の冒頭を使用しています。
 
