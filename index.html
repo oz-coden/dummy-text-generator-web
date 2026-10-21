@@ -20,7 +20,7 @@
             <h1>ダミーテキストジェネレーター</h1>
             <p class="ui-description">文字列を指定した文字数・回数に合わせて生成します。</p>
         </div>
-        <section class="ui-panel ui-stack" aria-label="テキスト生成">
+        <form id="generator-form" class="ui-panel ui-stack" aria-label="テキスト生成" novalidate>
             <div class="ui-row">
                 <div><label for="textSource">使用する文字列</label><select id="textSource">
                     <option value="ihatov">ポラーノの広場（宮沢賢治）</option>
@@ -37,9 +37,9 @@
                 </select></div>
                 <div><label for="countValue" id="countLabel">文字数</label><input type="number" id="countValue" value="400" min="1" max="1000000" step="1"></div>
             </div>
-            <div class="ui-actions"><button class="btn-primary" onclick="generateText()">テキストを生成する</button></div>
+            <div class="ui-actions"><button type="submit" class="btn-primary">テキストを生成する</button></div>
             <p id="tool-status" class="ui-status" role="status"></p>
-        </section>
+        </form>
         <section class="ui-panel">
             <div class="ui-between"><label for="outputText">生成結果</label><button class="btn-copy" onclick="copyToClipboard()" id="copyBtn">クリップボードにコピー</button></div>
             <textarea id="outputText" readonly placeholder="生成したテキストが表示されます"></textarea>

@@ -25,7 +25,7 @@ The aim is to prepare placeholder text for page layouts, input fields and protot
 ## Features
 
 - Preset passages and custom text  
-  Choose from three Japanese literary excerpts, Lorem ipsum, or your own string.
+  Choose from three Japanese literary excerpts, Lorem ipsum, or your own string. Empty custom input produces an error rather than switching to a preset.
 - Two generation modes  
   Repeat and trim the source to a specified length, or repeat it a specified number of times.
 - Unicode-aware character counts  
@@ -37,7 +37,7 @@ The aim is to prepare placeholder text for page layouts, input fields and protot
 
 ## Requirements, Dependencies
 
-- A current web browser with JavaScript enabled.
+- The latest stable version of a web browser with JavaScript enabled.
 - Automatic clipboard access may require a secure context, such as HTTPS or localhost. Manual copying is also available.
 
 The user interface is in Japanese. Shared UI assets are included in this repository. Python 3 is only needed for the example local server command below; an equivalent static HTTP server can also be used.
@@ -122,7 +122,7 @@ Preset excerpts:
 ## 機能
 
 - プリセットとカスタム文字列  
-  日本語の文学作品3種類の冒頭、Lorem ipsum、任意の文字列を選べます。
+  日本語の文学作品3種類の冒頭、Lorem ipsum、任意の文字列を選べます。カスタム文字列が空の場合は、プリセットへ切り替えずエラーを表示します。
 - 2つの生成モード  
   元の文字列を繰り返して指定文字数で切り詰めるか、指定回数だけ繰り返します。
 - Unicodeに対応した文字数  
@@ -134,7 +134,7 @@ Preset excerpts:
 
 ## 前提・依存
 
-- JavaScriptが有効な最新のWebブラウザ。
+- JavaScriptが有効な最新版（安定版）のWebブラウザ。
 - クリップボードへの自動コピーには、環境によってHTTPSやlocalhostなどの安全なコンテキストが必要です。手動でのコピーも利用できます。
 
 画面の言語は日本語です。共通UIのファイルはこのリポジトリに同梱しています。Python 3は下記のローカルサーバーのコマンドを使う場合に必要で、同等の静的HTTPサーバーでも実行できます。

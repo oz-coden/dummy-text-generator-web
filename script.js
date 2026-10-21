@@ -26,18 +26,21 @@ function generateText() {
     const count = Number(document.getElementById('countValue').value);
     const status = document.getElementById('tool-status');
     status.textContent = '';
+    document.getElementById('outputText').value = '';
+    document.getElementById('copyBtn').disabled = true;
     if (!Number.isSafeInteger(count) || count < 1 || count > 1000000) {
         status.textContent = '1〜100万の整数を指定してください。';
         return;
     }
     let base = textSource.value === 'custom' ? document.getElementById('customString').value : PRESET_TEXTS[textSource.value];
-    if (!base) base = PRESET_TEXTS.ihatov;
+    if (!base) { status.textContent = 'カスタム文字列を入力してください。'; return; }
     const chars = Array.from(base);
     const length = generateMode.value === 'length' ? count : chars.length * count;
     if (length > 1000000) { status.textContent = '生成結果は100万文字以下にしてください。'; return; }
     const result = generateMode.value === 'repeat' ? base.repeat(count)
         : base.repeat(Math.floor(count / chars.length)) + chars.slice(0, count % chars.length).join('');
     document.getElementById('outputText').value = result;
+    document.getElementById('copyBtn').disabled = false;
     document.getElementById('copyBtn').textContent = 'クリップボードにコピー';
     status.textContent = `${length.toLocaleString()}文字を生成しました。`;
 }
@@ -52,4 +55,5 @@ async function copyToClipboard() {
         document.getElementById('tool-status').textContent = 'コピーできませんでした。選択されたテキストを手動でコピーしてください。';
     }
 }
+document.getElementById('generator-form').addEventListener('submit', event => { event.preventDefault(); generateText(); });
 generateText();
